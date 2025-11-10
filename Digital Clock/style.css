@@ -1,0 +1,207 @@
+/* Reset and box sizing */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* Main container */
+.section {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('./futuristic-moon-background.jpg') no-repeat center center;
+    background-size: cover;
+    background-color: black;
+}
+
+/* Left side (quote) */
+.left {
+    height: 100vh;
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Right side (clock) */
+.right {
+    height: 100vh;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+/* Clock digits styling */
+#hour, #minutes, #seconds {
+    font-family: 'Digital-7 Mono', sans-serif;
+    color: #00ffff;
+    font-size: 40px;
+    letter-spacing: 1px;
+    padding: 1px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+/* Colon between time digits */
+#dot {
+    font-size: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: aqua;
+    padding: 2px 0 8px 0;
+}
+
+/* AM/PM styling */
+#ampm {
+    font-family: 'Digital-7 Mono', sans-serif;
+    font-size: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 5px;
+    color: aqua;
+}
+
+/* Date styling */
+.date {
+    position: absolute;
+    right: 117px;
+    bottom: 260px;
+    height: 60px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    font-weight: bold;
+    color: blue;
+    font-family: 'Digital-7 Mono', sans-serif;
+}
+
+/* Quote styling */
+#quotes {
+    font-weight: bold;
+    font-size: 18px;
+    color: white;
+    position: relative;
+    font-family: Arial, Helvetica, sans-serif;
+    top: 40px;
+    left: -100px;
+}
+
+.border {
+    height: 120px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Author styling */
+#author {
+    font-weight: bold;
+    font-size: 15px;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    position: relative;
+    top: 50px;
+    right: -90px;
+}
+
+@media (max-width: 1024px) {
+    .left, .right {
+        width: 50%;
+        height: auto;
+    }
+    #hour, #minutes, #seconds {
+        font-size: 35px;
+    }
+    #ampm {
+        font-size: 20px;
+    }
+    .date {
+        right: 80px;
+        bottom: 180px;
+        font-size: 20px;
+        width: 250px;
+    }
+    #quotes {
+        font-size: 14px;
+        left: -80px;
+    }
+}
+
+/* Mobile Landscape (≤768px) */
+@media (max-width: 768px) {
+    .section {
+        flex-direction: column;
+    }
+    .left, .right {
+        width: 100%;
+        height: auto;
+    }
+    #hour, #minutes, #seconds {
+        font-size: 30px;
+    }
+    #dot {
+        font-size: 25px;
+    }
+    #ampm {
+        font-size: 18px;
+        margin-left: 3px;
+    }
+    .date {
+        position: static;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+    #quotes {
+        font-size: 13px;
+        top: 20px;
+        left: 0;
+        text-align: center;
+    }
+    #author {
+        top: 25px;
+        right: 0;
+        text-align: center;
+    }
+    .border {
+        width: 280px;
+        height: 100px;
+    }
+}
+
+/* Small Mobile (≤480px) */
+@media (max-width: 480px) {
+    #hour, #minutes, #seconds {
+        font-size: 25px;
+    }
+    #dot {
+        font-size: 20px;
+    }
+    #ampm {
+        font-size: 15px;
+    }
+    .date {
+        font-size: 16px;
+    }
+    #quotes {
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    #author {
+        font-size: 10px;
+    }
+    .border {
+        width: 240px;
+        height: 90px;
+    }
+}
